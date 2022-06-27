@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\v1\ProductosController;
-
+use App\Http\Controllers\v1\VentasController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -38,3 +38,10 @@ Route::post('/v1/productos',[ProductosController::class,'store']);
 Route::put('/v1/productos',[ProductosController::class,'putUpdate']);
 Route::patch('/v1/productos',[ProductosController::class,'patchUpdate']);
 Route::delete('/v1/productos/{id}',[ProductosController::class,'delete']);
+//ventas
+Route::get('/v1/ventas',[VentasController::class,'getAll']);
+Route::get('/v1/ventas/{id}',[VentasController::class,'getItem']);
+Route::post('/v1/ventas',[VentasController::class,'store']);
+Route::put('/v1/ventas',[VentasController::class,'putUpdate']);
+Route::patch('/v1/ventas',[VentasController::class,'patchUpdate']);
+Route::delete('/v1/ventas/{id}',[VentasController::class,'delete']);
